@@ -47,9 +47,25 @@ body{
 }
 
 .clicked-wrong{
-    background-color: pink;
+    background-color: red;
 }
 
 .clicked-right{
     background-color: limegreen;
+}
+
+#play-again{
+    border: 2px solid rgba(110, 110, 110, 0.596);
+    border-radius: 5px;
+    background-color: burlywood;
+    width: 40%;
+    height: 40px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#play-again:hover{
+    width: 42%;
+    height: 50px; 
 }
