@@ -51,6 +51,13 @@ body{
     height: 75px;
     width: 95%;
     margin: auto;
+    font-family: monospace;
+    font-size: 40px;
+    overflow: scroll;
+    
+    display: flex;
+    justify-content: right;
+    align-items: center;
 
     grid-column: 1 / 5;
     grid-row: 1 / 2;
