@@ -6,9 +6,6 @@ canvas.height = window.innerHeight;
 
 const c = canvas.getContext("2d");
 
-const gravity = 0.5;
-const friction = 0.7;
-
 function Circle(x, y, radius, dx, dy, color){
     this.x = x;
     this.y = y;
@@ -28,9 +25,11 @@ function Circle(x, y, radius, dx, dy, color){
     };
 
     this.update = function(){
+        let energyLoss = 0.3;
+        let friction  = 0.2;
 
         if(this.y + this.dy + this.radius > window.innerHeight){ //check bottom
-            this.dy = -this.dy * 0.3; //add loos of energy when bouncing
+            this.dy = - this.dy * energyLoss; //add loss of energy when bouncing
         }
 
         if(this.x + this.dx + this.radius > window.innerWidth || this.x + this.dx - this.radius < 0){
@@ -40,15 +39,32 @@ function Circle(x, y, radius, dx, dy, color){
         this.y = this.y + this.dy;
         this.x = this.x + this.dx;
 
-        this.dy ++;
-
-        let friction  = 0.2;
+        
         if(this.dx < 0){
             this.dx += friction;
+            friction = friction - 0.01;
         }
         if(this.dx > 0){
             this.dx -= friction;
+            friction = friction - 0.01;
         }
+
+        //if energy is too low then stop
+        if(Math.abs(this.dx) < 0.1){
+            this.dx = 0;
+        }
+
+        let touchingGround = this.y + this.radius >= window.innerHeight - 1; // 1 for margin of error
+        let smallBounce = Math.abs(this.dy) < 0.7;
+
+        if (touchingGround && smallBounce) {
+            this.dy = 0;
+            this.y = window.innerHeight - this.radius; //gently settle on the floor
+        }
+        else {
+            this.dy += 1; //apply gravity
+        }
+
 
         this.draw();
     };
