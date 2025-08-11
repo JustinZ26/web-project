@@ -1,0 +1,46 @@
+html, body{
+    height: 100%;
+}
+
+h3{
+    font-weight: 600;
+    font-family: fantasy;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width: 100px;
+}
+
+#choice{
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-container{
+    border: 2px solid black;
+    padding: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-choice{
+    transition: all 0.1s ease;
+}
+
+.player-choice:hover{
+    transform: scale(1.05);
+}
+
+.player-choice:active{
+    background-color: aqua;
+}
