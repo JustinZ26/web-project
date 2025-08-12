@@ -7,6 +7,10 @@ h3{
     font-family: fantasy;
 }
 
+p{
+    font-family: fantasy;
+}
+
 body{
     display: flex;
     flex-direction: column;
@@ -14,18 +18,28 @@ body{
     align-items: center;
 }
 
-img{
-    width: 100px;
+img {
+  width: 100px;
+}
+
+
+button{
+    background-color: rgba(255, 255, 255, 0);
+    /* border: 0px; */
+    padding: 0;
+    border: 2px solid black;
 }
 
 #choice{
     width: 35%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+
+    gap: 10px;
 }
 
 .image-container{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     padding: 5px;
 
     display: flex;
@@ -41,6 +55,52 @@ img{
     transform: scale(1.05);
 }
 
-.player-choice:active{
+/* button:active{
     background-color: aqua;
+} */
+
+.choosen{
+    animation: pulsing 4s infinite;
+}
+
+@keyframes pulsing{
+    0%, 32%, 64%, 100%{
+        transform: scale(1.05);
+    }
+
+    16%, 48%, 80%{
+        transform: scale(0.95);
+    }
+}
+
+#start-button{
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 30%;
+    margin: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+#start-button:hover{
+    transform: scale(1.05);
+}
+
+#start-button:active{
+    background-color: rgb(112, 106, 98);
+}
+
+#result-container{
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(122, 83, 83);
 }

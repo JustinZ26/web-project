@@ -9,22 +9,39 @@
 <body>
     
     <h3>Opponent:</h3>
-    <div class="image-container">
+    <div class="image-container" style="height: 100px;">
         <img id="opponent-choice" src="" alt="">
     </div>
 
     <h3>You:</h3>
     <div id="choice">
-        <div class="image-container player-choice">
-            <img src="images/paper.png" alt="paper">
-        </div>
-        <div class="image-container player-choice">
-            <img src="images/rock.png" alt="rock">
-        </div>
-        <div class="image-container player-choice">
-            <img src="images/scissor.png" alt="scissor">
-        </div>   
+        <button>
+            <div class="image-container player-choice">
+                <img src="images/paper.png" alt="paper">
+            </div>
+        </button>
+
+        <button>
+            <div class="image-container player-choice" style="height: 100px;">
+                <img src="images/rock.png" alt="rock">
+            </div>
+        </button>
+
+        <button>
+            <div class="image-container player-choice">
+                <img src="images/scissor.png" alt="scissor">
+            </div>
+        </button>
     </div>
+
+    <div id="start-button">
+        <p>Start</p>
+    </div>
+
+    <div id="result-container">
+        <p id="result">giia</p>
+    </div>
+    
 
     <script src="script.js"></script>
 </body>
