@@ -64,7 +64,11 @@ button{
 }
 
 @keyframes pulsing{
-    0%, 32%, 64%, 100%{
+    0%{
+        transform: scale(1);
+    }
+    
+    32%, 64%, 100%{
         transform: scale(1.05);
     }
 
