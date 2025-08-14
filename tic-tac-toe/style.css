@@ -1,0 +1,50 @@
+html, body{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    width: 75px;
+    height: 30px;
+}
+
+.choosen-character{
+    filter: brightness(80%);
+}
+
+#player-choice{
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 10px;
+}
+
+#grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+
+    gap: 5px;
+}
+
+.box{
+    /* width: 100px;
+    height: 100px; */
+    /* background-color: aqua; */
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.p-inside-the-box{
+    font-size: 100px;
+    font-family: fantasy;
+}
