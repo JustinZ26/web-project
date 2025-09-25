@@ -30,8 +30,8 @@ body{
     background-color: hotpink;
     color: aliceblue;
 
-    animation: zommy 2s infinite ;
-    animation-delay: 0.5s;
+    animation: rainbow 1s infinite;
+    animation-delay: 0s;
 }
 
 @keyframes shake{
@@ -66,5 +66,19 @@ body{
     }
 
 
+}
+
+@keyframes rainbow{
+    0%{
+        background-color: red;
+    }
+
+    33%{
+        background-color: green;
+    }
+
+    66%{
+        background-color: blue;
+    }
 }
 
